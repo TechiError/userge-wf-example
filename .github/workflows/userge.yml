@@ -32,6 +32,7 @@ jobs:
          timeout-minutes: 350
          continue-on-error: true
          run: |
+           sudo cp ./docker-compose.yml userge/docker-compose.yml
            cd userge
            docker-compose up -d
            docker-compose logs -f
