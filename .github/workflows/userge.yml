@@ -27,7 +27,7 @@ jobs:
        - name: cloning repo
          continue-on-error: false
          run: |
-           git clone https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/${{ secrets.CREDS }} userge
+           git clone https://${GitHubName}:${{ secrets.GH_TOKEN }}@${{ secrets.CREDS }} userge
        - name: Running Userge
          timeout-minutes: 350
          continue-on-error: true
