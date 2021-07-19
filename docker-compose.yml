@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  userge:
+      build:
+        context: https://github.com/code-rgb/USERGE-X.git#alpha
+      restart: on-failure
+      environment:
+          DATABASE_URL: mongodb+srv://usergeuser:userge@cluster0.izorc.mongodb.net/cluster0?retryWrites=true&w=majority
+      env_file:
+        - config.env
