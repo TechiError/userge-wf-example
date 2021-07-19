@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  userge:
+      build:
+        context: https://github.com/code-rgb/USERGE-X.git#alpha
+      restart: on-failure
+      env_file:
+        - config.env
